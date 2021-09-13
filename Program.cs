@@ -80,9 +80,12 @@ namespace Module5Lecture
             /*
              * Loop asking for donation - store 3 amounts and print
              */
-            double[] donations = new double[3];
+            
+            const int ARRAY_SIZE = 5;
+            
+            double[] donations = new double[ARRAY_SIZE];
             double total = 0;
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < donations.Length; i++)
             {
                 Console.WriteLine($"{i + 1} Donation");
                 Double.TryParse(Console.ReadLine(), out donations[i]);
