@@ -56,7 +56,6 @@ namespace Module5Lecture
             /*
              * Loop asking for donation - store 3 amounts and print
              */
-
             double[] donations = new double[3];
 
             Console.WriteLine("#1 Donation");
@@ -72,14 +71,33 @@ namespace Module5Lecture
             Console.WriteLine($"Donation #2: {donations[1]:C}");
             Console.WriteLine($"Donation #3: {donations[2]:C}");
 
-            Console.WriteLine($"Total: ${donations[0] + donations[1] + donations[2]}");
+            Console.WriteLine($"Total: {(donations[0] + donations[1] + donations[2]):C}");
         }
 
+
+        static void TryItOutLoop()
+        {
+            /*
+             * Loop asking for donation - store 3 amounts and print
+             */
+            double[] donations = new double[3];
+            double total = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine($"{i + 1} Donation");
+                Double.TryParse(Console.ReadLine(), out donations[i]);
+                total += donations[i];
+            }
+
+            Console.WriteLine($"Total:  {total:C}");
+
+        }
 
         static void Main(string[] args)
         {
             //Lecture4Review();
-            TryItOut();
+            //TryItOut();
+            TryItOutLoop();
         }
     }
 }
