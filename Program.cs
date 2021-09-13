@@ -80,9 +80,9 @@ namespace Module5Lecture
             /*
              * Loop asking for donation - store 3 amounts and print
              */
-            
+
             const int ARRAY_SIZE = 5;
-            
+
             double[] donations = new double[ARRAY_SIZE];
             double total = 0;
             for (int i = 0; i < donations.Length; i++)
@@ -93,14 +93,22 @@ namespace Module5Lecture
             }
 
             Console.WriteLine($"Total:  {total:C}");
+        }
 
+
+        static void timesTwo(int[] theArray)
+        {
+            for (int i = 0; i < theArray.Length; i++) theArray[i] = theArray[i] * 2;
+            
         }
 
         static void Main(string[] args)
         {
             //Lecture4Review();
             //TryItOut();
-            TryItOutLoop();
+            //TryItOutLoop();
+            
+            //timesTwo();
         }
     }
 }
