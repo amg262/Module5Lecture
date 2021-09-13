@@ -50,9 +50,36 @@ namespace Module5Lecture
             } while (input != "E");
         }
 
+
+        static void TryItOut()
+        {
+            /*
+             * Loop asking for donation - store 3 amounts and print
+             */
+
+            double[] donations = new double[3];
+
+            Console.WriteLine("#1 Donation");
+            Double.TryParse(Console.ReadLine(), out donations[0]);
+
+            Console.WriteLine("#2 Donation");
+            Double.TryParse(Console.ReadLine(), out donations[1]);
+
+            Console.WriteLine("#3 Donation");
+            Double.TryParse(Console.ReadLine(), out donations[2]);
+
+            Console.WriteLine($"Donation #1: {donations[0]:C}");
+            Console.WriteLine($"Donation #2: {donations[1]:C}");
+            Console.WriteLine($"Donation #3: {donations[2]:C}");
+
+            Console.WriteLine($"Total: ${donations[0] + donations[1] + donations[2]}");
+        }
+
+
         static void Main(string[] args)
         {
-            Lecture4Review();
+            //Lecture4Review();
+            TryItOut();
         }
     }
 }
